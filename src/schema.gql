@@ -11,6 +11,8 @@ type Customer {
   """Date and time when the object was updated last time."""
   updatedAt: Timestamp!
   email: String!
+  isActivated: Boolean!
+  activationCode: String!
 }
 
 """
@@ -32,6 +34,8 @@ input GetCustomerInput {
 input WhereCustomerInput {
   id: String
   email: String
+  activationCode: String
+  isActivated: Boolean
   createdAt: Timestamp
   updatedAt: Timestamp
 }

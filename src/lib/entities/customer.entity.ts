@@ -5,4 +5,10 @@ import { Base } from 'lib/entities/base.entity';
 export class Customer extends Base {
   @Field(() => String)
   email: string;
+
+  @Field(() => Boolean)
+  isActivated: boolean;
+
+  @Field(() => String)
+  activationCode: string;
 }
